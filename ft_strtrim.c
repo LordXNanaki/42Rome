@@ -18,30 +18,30 @@ char    *ft_strtrim(char const *s1, char const *set)
     char    *str;
     int i;
     int j;
+    int c;
+
     i = ft_strlen((char *)s1);
     str = (char *)malloc(sizeof(char) * (i + 1));
     i = 0;
+    j = 0;
+    c = 0;
+    if(!s1 || !set)
+        return (0);
     while (s1[i] != '\0')
     {
-        j = 0;
         while (set[j] != '\0')
         {
-            if(set[j] == s1[i])
+            while(set[j] == s1[i])
             {
-                str[i] = (char)s1[i + 1];
+                i++;
+                j = 0;
             }
             j++;
         }
-        str[i] = (char)s1[i];
+        j = 0;
+        str[c] = s1[i];
+        c++;
         i++;
     }
     return (str);    
-}
-
-int main()
-{
-    char *a = "banana";
-    char *b = "a";
-
-    printf("%s", ft_strtrim((const char *)a, (const char *)b));
 }
