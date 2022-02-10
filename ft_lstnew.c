@@ -6,7 +6,7 @@
 /*   By: dgioia <dgioia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 14:06:02 by dgioia            #+#    #+#             */
-/*   Updated: 2022/02/08 15:07:00 by dgioia           ###   ########.fr       */
+/*   Updated: 2022/02/10 16:37:48 by dgioia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,4 @@ t_list	*ft_lstnew(void *content)
 	nlist->content = content;
 	nlist->next = NULL;
 	return (nlist);
-
 }

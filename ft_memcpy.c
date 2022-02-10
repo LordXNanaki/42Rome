@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, unsigned int n)
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
 	unsigned int	i;	
 	unsigned char	*ptr1;
